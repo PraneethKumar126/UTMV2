@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My URL Shortener</title>
+</head>
+
+<body>
+    <h1>My URL Shortener</h1>
+    <a href="{% url 'shorten_link' %}">Shorten</a>
+    <a href="{% url 'decode' %}">Decode</a>
+    <form action="{% url 'decode' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="hashcode" />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>

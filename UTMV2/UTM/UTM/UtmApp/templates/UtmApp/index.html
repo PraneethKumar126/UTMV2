@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My URL Shortener</title>
+</head>
+
+<body>
+    <h1>My URL Shortener</h1>
+    <a href="{% url 'shorten_link' %}">Shorten</a>
+    <a href="{% url 'decode' %}">Decode</a>
+    <h1>{{hashcode}}</h1>
+</body>
+</html>
